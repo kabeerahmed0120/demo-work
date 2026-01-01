@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer - Demo UI</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom CSS to make it look "Acha" */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Hero Section Styling */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 90vh; /* Full screen height almost */
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-custom {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 30px;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #ff4757;
+            transform: translateY(-3px);
+            color: white;
+        }
+
+        /* Card Hover Effects */
+        .destination-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .destination-card img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Features Icon */
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fas fa-plane-departure me-2"></i>TravelXP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <a href="#" class="btn btn-custom ms-lg-3 btn-sm">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">Duniya Ghoomo, Befikra Raho</h1>
+            <p class="lead mb-5">Humare saath apne agle adventure ki planning karein. Best prices aur best experience ki guarantee.</p>
+            <a href="#destinations" class="btn btn-custom btn-lg">Explore Karein</a>
+        </div>
+    </header>
+
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <i class="fas fa-shield-alt feature-icon"></i>
+                        <h4>Safe Travel</h4>
+                        <p class="text-muted">Aapki safety humari pehli priority hai. Verified hotels aur guides.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <i class="fas fa-tag feature-icon"></i>
+                        <h4>Best Prices</h4>
+                        <p class="text-muted">Market mein sabse behtareen rates, bina kisi hidden charges ke.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <i class="fas fa-headset feature-icon"></i>
+                        <h4>24/7 Support</h4>
+                        <p class="text-muted">Humari team hamesha aapki madad ke liye tayar hai.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="destinations" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Popular Destinations</h2>
+                <p class="text-muted">Logon ki pasandida jagah</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card destination-card">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Paris">
+                        <div class="card-body">
+                            <h5 class="card-title">Paris, France</h5>
+                            <p class="card-text text-muted">City of lights ka maza lein. 5 Days / 4 Nights package.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$1200</span>
+                                <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card destination-card">
+                        <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Venice">
+                        <div class="card-body">
+                            <h5 class="card-title">Venice, Italy</h5>
+                            <p class="card-text text-muted">Khubsurat canals aur history. 4 Days / 3 Nights package.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$1500</span>
+                                <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card destination-card">
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Tokyo">
+                        <div class="card-body">
+                            <h5 class="card-title">Tokyo, Japan</h5>
+                            <p class="card-text text-muted">Modern technology aur culture. 6 Days / 5 Nights package.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold text-primary">$1800</span>
+                                <a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 TravelXP. Made with <i class="fas fa-heart text-danger"></i> for Demo.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
